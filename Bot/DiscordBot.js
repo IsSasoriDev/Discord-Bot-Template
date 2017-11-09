@@ -127,6 +127,17 @@ bot.on('message', (message) => {
             message.reply("You need to join a voice channel first");
         }
     }
+
+    //let's you determine best Grill
+    if(command === "bestGrill"){
+
+        message.reply("~~Yuri~~ Felix");
+
+    }
+
+  }else if(message.conten === "```css >tfw no gf ```"){
+
+      message.reply("Feel ya mate");
   }
 });
 /*
