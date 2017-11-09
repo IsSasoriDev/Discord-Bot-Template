@@ -1,0 +1,5 @@
+{
+  "token" : <Place Token>,
+  "prefix" : "$",
+  "mods" : ["Owner","Administrator", "Moderator"]
+}
