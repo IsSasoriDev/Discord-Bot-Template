@@ -102,7 +102,9 @@ bot.on('message', (message) => {
         if(!deleteCount || deleteCount < 2 || deleteCount > 100)
             return message.reply("Please provide a number between 2 and 100 for the number of messages to delete");
 
+        message.reply("trying to fetch messages...");
         const fetched = message.channel.fetchMessages({count: deleteCount});
+        message.reply("fetched successfully");
         message.channel.bulkDelete(fetched).catch((err) => {
             message.reply("Couldn't delete the messages. Error: "+err);
         });
@@ -135,7 +137,7 @@ bot.on('message', (message) => {
 
     }
 
-  }else if(message.conten === "```css >tfw no gf ```"){
+  }else if(message.content === "```css >tfw no gf ```"){
 
       message.reply("Feel ya mate");
   }
