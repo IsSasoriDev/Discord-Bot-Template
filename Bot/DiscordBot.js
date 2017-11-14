@@ -118,7 +118,7 @@ bot.on('message', (message) => {
       message.reply("~~Yuri~~ Felix");
 
     }
-
+    message.reply("Best grill ~~Yuri~~ Felix");
     if (command === "join") {
 
       if (!message.guild) return;
