@@ -113,7 +113,7 @@ bot.on('message', (message) => {
     }
 
     //let's you determine best Grill
-    if (command === "bestGrill") {
+    if (command === "bestgrill") {
       message.reply("~~Yuri~~ Felix");
       message.reply("Best grill ~~Yuri~~ Felix");
     }
@@ -136,8 +136,6 @@ bot.on('message', (message) => {
         message.reply("You need to join a voice channel first");
       }
     }
-
-    message.replace("Debug: command = " + command);
 
   } else if (message.content === "```css >tfw no gf```") {
 
