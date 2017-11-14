@@ -34,7 +34,7 @@ bot.on('message', (message) => {
     if (command === "kick") {
 
       // limited to mods and admins, so no other without permissions can kick
-      if (!message.member.roles.some(r => ["Owner", "Programmer"].includes(r.name)))
+      if (!message.member.roles.some(r => config.mods[0].includes(r.name)))
         return message.reply("Sorry, you don't have permissions to use this!");
 
 
@@ -67,7 +67,7 @@ bot.on('message', (message) => {
     if (command === "ban") {
 
       // limited to mods and admins, so no other without permissions can kick
-      if (!message.member.roles.some(r => ["Owner", "Programmer"].includes(r.name)))
+      if (!message.member.roles.some(r => ["Owner"].includes(r.name)))
         return message.reply("Sorry, you don't have permissions to use this!");
 
 
