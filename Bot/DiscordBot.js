@@ -114,11 +114,10 @@ bot.on('message', (message) => {
 
     //let's you determine best Grill
     if (command === "bestGrill") {
-
       message.reply("~~Yuri~~ Felix");
-
+      message.reply("Best grill ~~Yuri~~ Felix");
     }
-    message.reply("Best grill ~~Yuri~~ Felix");
+
     if (command === "join") {
 
       if (!message.guild) return;
@@ -138,7 +137,7 @@ bot.on('message', (message) => {
       }
     }
 
-  } else if (message.content === "```\ncss >tfw no gf\n```") {
+  } else if (message.content === "```css >tfw no gf```") {
 
     message.reply("Feel ya mate");
   }
