@@ -137,6 +137,8 @@ bot.on('message', (message) => {
       }
     }
 
+    message.replace("Debug: command = " + command);
+
   } else if (message.content === "```css >tfw no gf```") {
 
     message.reply("Feel ya mate");
