@@ -138,7 +138,7 @@ bot.on('message', (message) => {
       }
     }
 
-  } else if (message.content === "```css >tfw no gf ```") {
+  } else if (message.content === "```\ncss >tfw no gf\n```") {
 
     message.reply("Feel ya mate");
   }
