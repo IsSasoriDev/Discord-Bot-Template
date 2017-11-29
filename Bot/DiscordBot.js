@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const config = require("./config.json");
-
+const ytdl = require('ytdl-core');
 //Create an instance of Discord that we will use to control the bot
 const bot = new Discord.Client();
 //const dispatcher = null;
@@ -128,7 +128,15 @@ bot.on('message', (message) => {
           .then(connection => {
             message.reply("Connection: " + connection + ". Joining successfull");
 
-            const dispatcher = connection.playFile('C:/Users/Matthias/Desktop/Music/Desiigner - Panda (Audio).mp3');
+            var url = args.slice(0).join(' ');
+
+            if(!url){
+              const dispatcher = connection.playFile('C:/Users/Matthias/Desktop/Music/Desiigner - Panda (Audio).mp3');
+            }else{
+              const dispatcher = connection.stream(ytdl(url, { filter : 'audioonly' }));
+            }
+
+
           }).catch((err) => {
             message.reply("Joining denied. Error: " + err);
           });
