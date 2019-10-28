@@ -1,2 +1,2 @@
-# DiscordBot
-DiscordBot with node.js
+LMAO
+DiscordBot free template
